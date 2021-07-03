@@ -1,377 +1,412 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <ImageView
-            android:id="@+id/Image_Profile_Activity_AGCLogo"
-            android:layout_width="86dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="33dp"
-            android:src="@drawable/ic_agc2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            app:layout_constraintEnd_toStartOf="@id/Image_Profile_Activity_plus"
-            app:layout_constraintTop_toTopOf="parent"
-            app:cardBackgroundColor="#D90134"
-            android:layout_marginTop="31dp"
-            android:layout_marginEnd="37dp"
-            app:cardCornerRadius="17dp"
-            android:id="@+id/Image_Profile_Activity_contact">
-
-            <ImageView
-
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_contact" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <ImageView
-            android:id="@+id/Image_Profile_Activity_plus"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
-            android:layout_marginTop="37dp"
-            android:src="@drawable/ic_plus3"
-            android:layout_marginEnd="37dp"
-            app:layout_constraintEnd_toStartOf="@id/Image_Profile_Activity_multiple"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/Image_Profile_Activity_multiple"
-            android:layout_width="17dp"
-            android:layout_height="13dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="29dp"
-            android:src="@drawable/ic_multiple"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/Image_Profile_Activity_pic"
-            android:layout_width="127dp"
-            android:layout_height="127dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/bitmap"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Image_Profile_Activity_contact" />
-
-        <ImageView
-            android:id="@+id/Image_Profile_Activity_edit"
-            android:layout_width="32dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="81dp"
-            android:src="@drawable/ic_edit"
-            app:layout_constraintStart_toEndOf="@id/Image_Profile_Activity_pic"
-            app:layout_constraintTop_toBottomOf="@id/Image_Profile_Activity_contact" />
-
-        <ImageView
-            android:id="@+id/Image_Profile_Activity_upload"
-            android:layout_width="32dp"
-            android:layout_height="37dp"
-            android:layout_marginTop="76dp"
-            android:layout_marginEnd="44dp"
-            android:src="@drawable/ic_upload"
-            app:layout_constraintEnd_toStartOf="@id/Image_Profile_Activity_pic"
-            app:layout_constraintTop_toBottomOf="@id/Image_Profile_Activity_contact" />
-
-        <TextView
-            android:id="@+id/text_Profile_Activity_edit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/edit"
-            android:textAlignment="center"
-            android:textColor="#6385E1"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@id/Image_Profile_Activity_edit"
-            app:layout_constraintTop_toBottomOf="@id/Image_Profile_Activity_edit" />
-
-        <TextView
-            android:id="@+id/text_LandingActivity_upload"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/upload"
-            android:textColor="#6385E1"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/Image_Profile_Activity_upload"
-            app:layout_constraintTop_toBottomOf="@id/Image_Profile_Activity_upload" />
-
-        <TextView
-            android:id="@+id/text_LandingActivity_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/user_name"
-            android:textColor="#6385E1"
-            android:textSize="36sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Image_Profile_Activity_pic" />
-
-        <TextView
-            android:id="@+id/text_LandingActivity_dash"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dashboard"
-            android:textSize="14sp"
-            android:layout_marginStart="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="9dp"
-           app:layout_constraintBottom_toBottomOf="@id/switch_Profile"/>
-
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch_Profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="29dp"
-            android:layout_marginEnd="29dp"
-            android:shadowColor="#44A33D"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_name" />
-
-        <TextView
-            android:id="@+id/border"
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="29dp"
-            android:background="#D8D8D8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/switch_Profile" />
-
-        <TextView
-            android:id="@+id/text_Profile_Activity_50"
-            android:layout_width="75dp"
-            android:layout_height="29dp"
-            android:layout_marginTop="9dp"
-            android:text="@string/value50"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/border" />
-
-        <TextView
-            android:id="@+id/text_Profile_Activity_2.3k"
-            android:layout_width="75dp"
-            android:layout_height="29dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/value23.k"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toStartOf="@id/text_Profile_Activity_50"
-            app:layout_constraintTop_toBottomOf="@id/border" />
-
-        <TextView
-            android:id="@+id/text_Profile_Activity_21"
-            android:layout_width="75dp"
-            android:layout_height="29dp"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/value21"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@id/text_Profile_Activity_50"
-            app:layout_constraintTop_toBottomOf="@id/border" />
-
-        <TextView
-            android:id="@+id/text_Profile_Activity_follow"
-            android:layout_width="75dp"
-            android:layout_height="29dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/followers"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@id/text_Profile_Activity_2.3k"
-            app:layout_constraintStart_toStartOf="@id/text_Profile_Activity_2.3k"
-            app:layout_constraintTop_toBottomOf="@id/text_Profile_Activity_2.3k" />
-
-        <TextView
-            android:id="@+id/text_Profile_Activity_art"
-            android:layout_width="75dp"
-            android:layout_height="29dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/artWork"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@id/text_Profile_Activity_50"
-            app:layout_constraintStart_toStartOf="@id/text_Profile_Activity_50"
-            app:layout_constraintTop_toBottomOf="@id/text_Profile_Activity_50" />
-
-        <TextView
-            android:id="@+id/text_Profile_Activity_exhibitions"
-            android:layout_width="75dp"
-            android:layout_height="29dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/exibitions"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@id/text_Profile_Activity_21"
-            app:layout_constraintStart_toStartOf="@id/text_Profile_Activity_21"
-            app:layout_constraintTop_toBottomOf="@id/text_Profile_Activity_21" />
-
-        <TextView
-            android:id="@+id/border2"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="29dp"
-            android:background="#D8D8D8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_Profile_Activity_exhibitions" />
-
-        <TextView
-            android:id="@+id/text_Profile_Activity_43k"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/value43k"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/border2" />
+            android:elevation="0dp"
+            app:contentScrim="@color/white"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-        <ImageView
-            android:id="@+id/Image_Profile_Activity_arrow"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            app:layout_constraintTop_toTopOf="@id/text_Profile_Activity_43k"
-            app:layout_constraintBottom_toBottomOf="@+id/text_Profile_Activity_43k"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/ic_arrow"
-            app:layout_constraintEnd_toStartOf="@id/text_Profile_Activity_43k"
-            app:layout_constraintTop_toBottomOf="@id/border2" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/text_Profile_Activity_120"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="40dp"
-            android:text="@string/f21"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@id/Image_Profile_Activity_arrow"
-            app:layout_constraintTop_toBottomOf="@id/border2" />
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:elevation="0dp"
+                    android:translationZ="0dp"
+                    app:layout_collapseMode="pin"
+                    app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/Image_Profile_Activity_heart"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            app:layout_constraintTop_toTopOf="@id/text_Profile_Activity_120"
-            app:layout_constraintBottom_toBottomOf="@+id/text_Profile_Activity_120"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/ic_heart"
-            app:layout_constraintEnd_toStartOf="@id/text_Profile_Activity_120"
-            app:layout_constraintTop_toBottomOf="@id/border2" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/Image_Profile_Activity_share"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginStart="40dp"
-            app:layout_constraintTop_toTopOf="@id/text_Profile_Activity_2.3"
-            app:layout_constraintBottom_toBottomOf="@+id/text_Profile_Activity_2.3"
-            android:src="@drawable/ic_share"
-            app:layout_constraintStart_toEndOf="@id/text_Profile_Activity_43k"
-            app:layout_constraintTop_toBottomOf="@id/border2" />
+                        <ImageView
+                            android:id="@+id/Image_Profile_Activity_AGCLogo"
+                            android:layout_width="86dp"
+                            android:layout_height="31dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="33dp"
+                            android:src="@drawable/ic_agc2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/Image_Profile_Activity_contact"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="31dp"
+                            android:layout_marginEnd="37dp"
+                            app:cardBackgroundColor="#D90134"
+                            app:cardCornerRadius="17dp"
+                            app:layout_constraintEnd_toStartOf="@id/Image_Profile_Activity_plus"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_contact" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <ImageView
+                            android:id="@+id/Image_Profile_Activity_plus"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginTop="37dp"
+                            android:layout_marginEnd="37dp"
+                            android:src="@drawable/ic_plus3"
+                            app:layout_constraintEnd_toStartOf="@id/Image_Profile_Activity_multiple"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/Image_Profile_Activity_multiple"
+                            android:layout_width="17dp"
+                            android:layout_height="13dp"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginEnd="29dp"
+                            android:src="@drawable/ic_multiple"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <ImageView
+                    android:id="@+id/Image_Profile_Activity_pic"
+                    android:layout_width="127dp"
+                    android:layout_height="127dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/bitmap"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+                <ImageView
+                    android:id="@+id/Image_Profile_Activity_edit"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="81dp"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintStart_toEndOf="@id/Image_Profile_Activity_pic"
+                    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+                <ImageView
+                    android:id="@+id/Image_Profile_Activity_upload"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="76dp"
+                    android:layout_marginEnd="44dp"
+                    android:src="@drawable/ic_upload"
+                    app:layout_constraintEnd_toStartOf="@id/Image_Profile_Activity_pic"
+                    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+                <TextView
+                    android:id="@+id/text_Profile_Activity_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit"
+                    android:textAlignment="center"
+                    android:textColor="#6385E1"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/Image_Profile_Activity_edit"
+                    app:layout_constraintTop_toBottomOf="@id/Image_Profile_Activity_edit" />
+
+                <TextView
+                    android:id="@+id/text_LandingActivity_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload"
+                    android:textColor="#6385E1"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/Image_Profile_Activity_upload"
+                    app:layout_constraintTop_toBottomOf="@id/Image_Profile_Activity_upload" />
+
+                <TextView
+                    android:id="@+id/text_LandingActivity_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/user_name"
+                    android:textColor="#6385E1"
+                    android:textSize="36sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Image_Profile_Activity_pic" />
+
+                <TextView
+                    android:id="@+id/text_LandingActivity_dash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="9dp"
+                    android:text="@string/dashboard"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/switch_Profile"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_Profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="29dp"
+                    android:layout_marginEnd="29dp"
+                    android:shadowColor="#44A33D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_name" />
+
+                <TextView
+                    android:id="@+id/border"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="29dp"
+                    android:background="#D8D8D8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/switch_Profile" />
+
+                <TextView
+                    android:id="@+id/text_Profile_Activity_50"
+                    android:layout_width="75dp"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="9dp"
+                    android:text="@string/value50"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/border" />
+
+                <TextView
+                    android:id="@+id/text_Profile_Activity_2.3k"
+                    android:layout_width="75dp"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="@string/value23.k"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toStartOf="@id/text_Profile_Activity_50"
+                    app:layout_constraintTop_toBottomOf="@id/border" />
+
+                <TextView
+                    android:id="@+id/text_Profile_Activity_21"
+                    android:layout_width="75dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="@string/value21"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toEndOf="@id/text_Profile_Activity_50"
+                    app:layout_constraintTop_toBottomOf="@id/border" />
+
+                <TextView
+                    android:id="@+id/text_Profile_Activity_follow"
+                    android:layout_width="75dp"
+                    android:layout_height="29dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="@string/followers"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/text_Profile_Activity_2.3k"
+                    app:layout_constraintStart_toStartOf="@id/text_Profile_Activity_2.3k"
+                    app:layout_constraintTop_toBottomOf="@id/text_Profile_Activity_2.3k" />
+
+                <TextView
+                    android:id="@+id/text_Profile_Activity_art"
+                    android:layout_width="75dp"
+                    android:layout_height="29dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="@string/artWork"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/text_Profile_Activity_50"
+                    app:layout_constraintStart_toStartOf="@id/text_Profile_Activity_50"
+                    app:layout_constraintTop_toBottomOf="@id/text_Profile_Activity_50" />
+
+                <TextView
+                    android:id="@+id/text_Profile_Activity_exhibitions"
+                    android:layout_width="75dp"
+                    android:layout_height="29dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="@string/exibitions"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/text_Profile_Activity_21"
+                    app:layout_constraintStart_toStartOf="@id/text_Profile_Activity_21"
+                    app:layout_constraintTop_toBottomOf="@id/text_Profile_Activity_21" />
+
+                <TextView
+                    android:id="@+id/border2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="29dp"
+                    android:background="#D8D8D8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_Profile_Activity_exhibitions" />
+
+                <TextView
+                    android:id="@+id/text_Profile_Activity_43k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/value43k"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/border2" />
+
+                <ImageView
+                    android:id="@+id/Image_Profile_Activity_arrow"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_arrow"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_Profile_Activity_43k"
+                    app:layout_constraintEnd_toStartOf="@id/text_Profile_Activity_43k"
+                    app:layout_constraintTop_toBottomOf="@id/border2"
+                    app:layout_constraintTop_toTopOf="@id/text_Profile_Activity_43k" />
+
+                <TextView
+                    android:id="@+id/text_Profile_Activity_120"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="40dp"
+                    android:text="@string/f21"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@id/Image_Profile_Activity_arrow"
+                    app:layout_constraintTop_toBottomOf="@id/border2" />
+
+                <ImageView
+                    android:id="@+id/Image_Profile_Activity_heart"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_heart"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_Profile_Activity_120"
+                    app:layout_constraintEnd_toStartOf="@id/text_Profile_Activity_120"
+                    app:layout_constraintTop_toBottomOf="@id/border2"
+                    app:layout_constraintTop_toTopOf="@id/text_Profile_Activity_120" />
+
+                <ImageView
+                    android:id="@+id/Image_Profile_Activity_share"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="40dp"
+                    android:src="@drawable/ic_share"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_Profile_Activity_2.3"
+                    app:layout_constraintStart_toEndOf="@id/text_Profile_Activity_43k"
+                    app:layout_constraintTop_toBottomOf="@id/border2"
+                    app:layout_constraintTop_toTopOf="@id/text_Profile_Activity_2.3" />
 
 
-        <TextView
-            android:id="@+id/text_Profile_Activity_2.3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/k"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@id/Image_Profile_Activity_share"
-            app:layout_constraintTop_toBottomOf="@id/border2" />
+                <TextView
+                    android:id="@+id/text_Profile_Activity_2.3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/k"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@id/Image_Profile_Activity_share"
+                    app:layout_constraintTop_toBottomOf="@id/border2" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_Profile_Activity_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginEnd="18dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_Profile_Activity_2.3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#5E1147"
+                        android:gravity="center"
+                        android:text="@string/pall"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#9C073F"
 
 
-        <LinearLayout
-            android:id="@+id/linearLayout_Profile_Activity_layout"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="18dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginTop="19dp"
-            app:layout_constraintTop_toBottomOf="@id/text_Profile_Activity_2.3"
-            android:orientation="horizontal">
+                        />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="@string/pall"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:background="#5E1147"
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#9C073F"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#D70B39"
 
 
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#D70B39"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#FD4729"
 
 
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#FD4729"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#FEC12D"
 
 
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#FEC12D"
+                        />
+                </LinearLayout>
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                />
-        </LinearLayout>
-
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
@@ -381,13 +416,13 @@
             android:layout_marginStart="26dp"
             app:layout_constraintTop_toBottomOf="@id/linearLayout_Profile_Activity_layout" />
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="540dp"
-            android:nestedScrollingEnabled="false"
-            app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 
-</androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
