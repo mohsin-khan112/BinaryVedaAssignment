@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="lorem_ipsum_demo_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
+    <string name="Register">register</string>
+    <string name="me_as_a_collector"> me as a collector</string>
+    <string name="track"> track my application</string>
+    <string name="lorem_used"> lorem ipsum is used</string>
+    <string name="about_us"> About Us</string>
+    <string name="team">Team.</string>
+    <string name="reach_us">Reach us.</string>
+    <string name="affiliations">Affiliations.</string>
+    <string name="disclaimers">Disclaimers.</string>
+    <string name="privacy_policy">Privacy Policy.</string>
+    <string name="content"> Content Copyright reserved.</string>
+
+    <string name="lorem_msg">     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco.</string>
+
+    <string name="lorem_msg4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</string>
+
+    <string name="lorem_allMsg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+
+    <string name="edit">Edit</string>
+    <string name="upload">Upload</string>
+    <string name="user_name">    john.doe</string>
+    <string name="dashboard">My dashboard</string>
+    <string name="pall">pallette</string>
+    <string name="k">2.3</string>
+    <string name="f21">21</string>
+    <string name="value43k">43K</string>
+    <string name="artWork">ArtWorks</string>
+    <string name="followers">Followers</string>
+    <string name="value21">21</string>
+    <string name="exibitions">Exhibitions</string>
+    <string name="value23.k">23.k</string>
+    <string name="value50">50</string>
+
+
+</resources>

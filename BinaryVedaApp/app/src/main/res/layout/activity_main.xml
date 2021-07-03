@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="40dp"
+    tools:context=".LandingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_AGCLogo"
+            android:layout_width="211.8dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_agc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_ImageLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/ic_galleryimage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_AGCLogo"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView_LandingActivity_Text"
+            android:layout_width="0dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="50dp"
+            android:lineHeight="24dp"
+            android:text="@string/lorem_ipsum_demo_message"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_ImageLogo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_LandingActivity_registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="7dp"
+            android:backgroundTint="@color/tomato_Color"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:iconPadding="3dp"
+            android:text="@string/Register"
+            android:onClick="registerButton"
+            android:textAllCaps="false"
+            android:textSize="19sp"
+            app:cornerRadius="9dp"
+            app:icon="@drawable/ic_baseline_arrow_forward_24"
+            app:iconGravity="start"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/text_LandingActivity_Collector"
+            app:layout_constraintTop_toBottomOf="@id/textView_LandingActivity_Text" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_Collector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/me_as_a_collector"
+            android:textColor="#FF262626"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/button_LandingActivity_registerButton"
+            app:layout_constraintBottom_toBottomOf="@+id/button_LandingActivity_registerButton"/>
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_RightArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="53dp"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_LandingActivity_registerButton" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="80dp"
+            android:lineHeight="28dp"
+            android:text="@string/track"
+            android:textColor="@color/flower_blue"
+            android:textSize="23sp"
+            app:layout_constraintStart_toEndOf="@id/Image_LandingActivity_RightArrow"
+            app:layout_constraintTop_toBottomOf="@id/button_LandingActivity_registerButton" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_group"
+            android:layout_width="90dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="69dp"
+            android:src="@drawable/ic_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_track" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_lorem"
+            android:layout_width="201dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="150dp"
+            android:text="@string/lorem_used"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_group" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="29dp"
+            android:lineHeight="24dp"
+            android:text="@string/lorem_msg"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_lorem" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_group2"
+            android:layout_width="50dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="63dp"
+            android:src="@drawable/ic_group2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_msg" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_lorem1"
+            android:layout_width="201dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="150dp"
+            android:text="@string/lorem_used"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_group2" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_msg1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginEnd="20dp"
+            android:lineHeight="24dp"
+            android:text="@string/lorem_msg"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_lorem1" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_group4"
+            android:layout_width="77dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="77dp"
+            android:src="@drawable/ic_group4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_msg1" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_lorem2"
+            android:layout_width="201dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="150dp"
+            android:lineHeight="32dp"
+            android:text="@string/lorem_used"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_group4" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_msg4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="64dp"
+            android:lineHeight="24dp"
+            android:text="@string/lorem_msg4"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_lorem2" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_group14"
+            android:layout_width="75dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="77dp"
+            android:src="@drawable/ic_group14copy2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_msg4" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_lorem14"
+            android:layout_width="201dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="150dp"
+            android:lineHeight="32dp"
+            android:text="@string/lorem_used"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_group14" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_msg14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="64dp"
+            android:lineHeight="24dp"
+            android:text="@string/lorem_msg4"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_lorem14" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_group7"
+            android:layout_width="83dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="34dp"
+            android:src="@drawable/ic_group7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_msg14" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_lorem7"
+            android:layout_width="201dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="150dp"
+            android:lineHeight="32dp"
+            android:text="@string/lorem_used"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_group7" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_msg7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="64dp"
+            android:lineHeight="24dp"
+            android:text="@string/lorem_msg4"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_lorem7" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_group10"
+            android:layout_width="74dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="76dp"
+            android:src="@drawable/ic_group10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_msg7" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_lorem10"
+            android:layout_width="201dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="150dp"
+            android:lineHeight="32dp"
+            android:text="@string/lorem_used"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_group10" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_msg10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="49dp"
+            android:lineHeight="24dp"
+            android:text="@string/lorem_allMsg"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_lorem10" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_group14b"
+            android:layout_width="74dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="68dp"
+            android:src="@drawable/ic_group14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_msg10" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_lorem14b"
+            android:layout_width="201dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="150dp"
+            android:lineHeight="32dp"
+            android:text="@string/lorem_used"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_group14b" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_msg14b"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="63dp"
+            android:lineHeight="24dp"
+            android:text="@string/lorem_msg4"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_lorem14b" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_group15"
+            android:layout_width="43dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="38dp"
+            android:src="@drawable/ic_group15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_msg14b" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_lorem15"
+            android:layout_width="201dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="150dp"
+            android:lineHeight="32dp"
+            android:text="@string/lorem_used"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_group15" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_msg15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="50dp"
+            android:lineHeight="24dp"
+            android:text="@string/lorem_allMsg"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_lorem15" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_fb"
+            android:layout_width="33dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/fb"
+            app:layout_constraintEnd_toStartOf="@id/Image_LandingActivity_instagram"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_msg15" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_instagram"
+            android:layout_width="33dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="68dp"
+            android:src="@drawable/instagram"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_msg15" />
+
+        <TextView
+            android:id="@+id/text_LandingActivity_border"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="33dp"
+            android:background="#D8D8D8 "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_instagram" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_AGCFullLogo"
+            android:layout_width="255dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="60dp"
+            android:src="@drawable/ic_agcfull"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_border" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/textView_aboutUs"
+           app:layout_constraintStart_toStartOf="parent"
+           android:layout_marginStart="47dp"
+           app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_AGCFullLogo"
+           android:textColor="@color/black"
+           android:text="@string/about_us"
+           android:layout_marginTop="34dp"
+           android:textSize="16sp"
+           android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_team"
+            app:layout_constraintStart_toStartOf="@id/textView_aboutUs"
+            app:layout_constraintTop_toBottomOf="@id/textView_aboutUs"
+            android:textColor="@color/black"
+            android:text="@string/team"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_reachUs"
+            app:layout_constraintStart_toStartOf="@id/textView_team"
+            app:layout_constraintTop_toBottomOf="@id/textView_team"
+            android:textColor="@color/black"
+            android:text="@string/reach_us"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViw_affiliations"
+            app:layout_constraintStart_toStartOf="@id/textView_privacy"
+            app:layout_constraintEnd_toEndOf="@id/textView_privacy"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@id/Image_LandingActivity_AGCFullLogo"
+            android:textColor="@color/black"
+            android:text="@string/reach_us"
+            android:layout_marginTop="34dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViw_disclaimers"
+            app:layout_constraintEnd_toEndOf="@id/textView_privacy"
+            app:layout_constraintStart_toStartOf="@id/textView_privacy"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@id/textViw_affiliations"
+            android:textColor="@color/black"
+            android:text="@string/disclaimers"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_privacy"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="85dp"
+            app:layout_constraintTop_toBottomOf="@id/textViw_disclaimers"
+            android:textColor="@color/black"
+            android:text="@string/privacy_policy"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/barrier_1"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="textView_reachUs,textView_privacy"/>
+
+        <TextView
+            android:id="@+id/text_LandingActivity_border2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="33dp"
+            android:background="#D8D8D8 "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_1"/>
+
+        <TextView
+            android:id="@+id/text_LandingActivity_Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginStart="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/content"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_border2" />
+
+        <ImageView
+            android:id="@+id/Image_LandingActivity_invalide"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_invalidename"
+            app:layout_constraintEnd_toStartOf="@id/text_LandingActivity_Content"
+            app:layout_constraintTop_toBottomOf="@id/text_LandingActivity_border2" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
